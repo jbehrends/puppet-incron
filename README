@@ -1,16 +1,17 @@
-incron
+incron - Originally forked from https://github.com/duritong/puppet-incron
+
 
 This is the incron module.
 
 License
 -------
-
+GPL
 
 Contact
 -------
-
+root@zoide.net
 
 Support
 -------
 
-Please log tickets and issues at our [Projects site](http://projects.example.com)
+Please log tickets and issues at our [Projects site](https://github.com/zoide/puppet-incron)

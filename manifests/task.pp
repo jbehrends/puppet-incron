@@ -27,9 +27,10 @@ define incron::task ($ensure = 'present', $path, $mask, $command) {
   if !($mask in $masks) {
     err("${mask} not known. see: https://www.kernel.org/pub/linux/kernel/people/rml/inotify/headers/inotify.h for allowed values")
   }
+  $mask_r = join(flatten([$mask]), ',')
 
   file { "/etc/incron.d/${name}":
-    content => "${path} ${mask} ${command}\n",
+    content => "${path} ${mask_r} ${command}\n",
     ensure  => $ensure,
     require => Package['incron'],
   }
